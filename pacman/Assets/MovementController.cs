@@ -7,7 +7,7 @@ public class MovementController : MonoBehaviour
     public GameManager gameManager;
 
     public GameObject currentNode;
-    public float speed = 3.5f;
+    public float speed = 4f;
 
     public string direction = "";
     public string lastMovingDirection = "";
@@ -17,6 +17,7 @@ public class MovementController : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        lastMovingDirection = "left";
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 

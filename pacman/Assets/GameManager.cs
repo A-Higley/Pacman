@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     public void AddToScore(int amount)
     {
         score += amount;
-        scoreText.text = score.ToString();
+        scoreText.text = "Score: " + score.ToString();
     }
 
     public void CollectedPellet(NodeController nodeController)

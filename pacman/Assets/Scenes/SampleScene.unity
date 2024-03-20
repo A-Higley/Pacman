@@ -17606,7 +17606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   currentNode: {fileID: 879312404}
-  speed: 3.5
+  speed: 4
   direction: 
   lastMovingDirection: 
   canWarp: 1
@@ -47533,7 +47533,7 @@ MonoBehaviour:
   munch2: {fileID: 1785397865}
   currentMunch: 0
   score: 0
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 473532289}
 --- !u!4 &1785397863
 Transform:
   m_ObjectHideFlags: 0
