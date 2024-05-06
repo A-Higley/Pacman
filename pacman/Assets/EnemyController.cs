@@ -83,6 +83,7 @@ public class EnemyController : MonoBehaviour
     {
         if (testRespawn == true)
         {
+            readyToLeaveHome = false;
             ghostNodeState = GhostNodeStatesEnum.respawning;
             testRespawn = false;
         }
@@ -102,7 +103,7 @@ public class EnemyController : MonoBehaviour
         {
             string direction = "";
 
-            //we have reached our start node, move to the centernode
+            //we have reached our start node, move to the center node
             if (transform.position.x == ghostNodeStart.transform.position.x && transform.position.y == ghostNodeStart.transform.position.y)
             {
                 direction = "down";
@@ -124,12 +125,14 @@ public class EnemyController : MonoBehaviour
                 }
             }
             //if our respawn sttae is either the left or right node, and we got to htat node, leave home again.
-            else if ((transform.position.x == ghostNodeLeft.transform.position.x && transform.position.y == ghostNodeLeft.transform.position.y)
-                || (transform.position.x == ghostNodeRight.transform.position.x && transform.position.y == ghostNodeRight.transform.position.y))
+            else if (
+                (transform.position.x == ghostNodeLeft.transform.position.x && transform.position.y == ghostNodeLeft.transform.position.y)
+                || (transform.position.x == ghostNodeRight.transform.position.x && transform.position.y == ghostNodeRight.transform.position.y)
+                )
             {
                 ghostNodeState = respawnState;
             }
-            //we are in the gameboard still, lovate our start node
+            //we are in the gameboard still, locate our start node
             else
             {
                 //Determine quickest direction to home
